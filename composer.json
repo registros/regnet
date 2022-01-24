@@ -1,0 +1,23 @@
+{
+	"name": "registros/regnet",
+	"description": "Regnet is a set of standards and tools to facilitate the communication within the distributed web infrastructure.",
+	"type": "library",
+	"license": "MIT",
+	"autoload": {
+		"classmap": [
+			"core/src"
+		],
+		"files": [
+			"core/init.php"
+		]		
+	},
+	"authors": [
+		{
+			"name": "Adrian Zurkiewicz",
+			"email": "adrian.zurkiewicz@gmail.com"
+		}
+	],
+	"minimum-stability": "stable",
+	"require": {}
+
+}

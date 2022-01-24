@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>500 Internal Server Error</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>500 Internal Server Error</h1>
+		<?php
+		
+		if (!isset($error)) {
+			$error = 'Unknown server error';
+		}
+
+		if ($error instanceof Throwable) {
+
+			$show = $error->getMessage();
+			
+			if (defined('DEBUG')) {
+				
+				if (DEBUG) {
+					$show = (string)$error;
+				}
+					
+			}
+			
+			echo '<pre>';
+			echo htmlentities($show);
+			echo '</pre>';
+			
+		} else {
+
+			echo (string) $error;
+		}
+		?>
+	</body>
+</html>
