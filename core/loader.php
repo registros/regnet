@@ -9,15 +9,15 @@
  */
 $src = [];
 
-if (is_dir(REGNET_LOCAL_DIR . '/local/map/')) {
+if (is_dir(REGNET_LOCAL_DIR . '/map/')) {
 
-	foreach (scandir(REGNET_LOCAL_DIR . '/local/map/') as $entry) {
+	foreach (scandir(REGNET_LOCAL_DIR . '/map/') as $entry) {
 
 		if (in_array($entry, ['.', '..'])) {
 			continue;
 		}
 
-		$src[] = REGNET_LOCAL_DIR . '/local/map/' . $entry;
+		$src[] = REGNET_LOCAL_DIR . '/map/' . $entry;
 	}
 }
 

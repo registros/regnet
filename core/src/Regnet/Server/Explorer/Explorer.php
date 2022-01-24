@@ -56,7 +56,6 @@ class Explorer {
 		$this->setAttribute('namespace', $this->getDefaultNamespace($url));
 		$this->setAttribute('url', $url);
 		$this->setAttribute('documenter', 'https://regnet.registros.net/documenter?url=' . rawurlencode($url));
-//		$this->setAttribute('documenter', 'https://regnet.registros.local/documenter?url=' . rawurlencode($url));
 	}
 
 	/**

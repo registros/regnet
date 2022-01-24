@@ -88,7 +88,7 @@ class ClassAPI {
 		}
 
 
-		throw new Exception("Configure 'onCache' in local/etc/server.php");
+		throw new Exception("Configure 'onCache' in etc/server.php");
 	}
 
 	/**
@@ -106,7 +106,7 @@ class ClassAPI {
 			return $cache->getCache($key, $value);
 		}
 		
-		throw new Exception("Configure 'onCache' in local/etc/server.php");
+		throw new Exception("Configure 'onCache' in etc/server.php");
 	}
 
 	/**

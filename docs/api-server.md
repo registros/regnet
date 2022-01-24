@@ -19,7 +19,7 @@ cd regnet
 
 ### Configuration of API server ###
 
-Edit the ./regnet/local/etc/server.php file to configure your security policy and to decide which classes and methods are exported through api.
+Edit the ./regnet/etc/server.php file to configure your security policy and to decide which classes and methods are exported through api.
 
 ### Integration ###
 

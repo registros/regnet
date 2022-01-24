@@ -231,7 +231,7 @@ class Mapper {
 	static public function getList(): array {
 
 		$result = [];
-		$dir = REGNET_LOCAL_DIR . '/local/map/';
+		$dir = REGNET_LOCAL_DIR . '/map/';
 
 
 		foreach (scandir($dir) as $entry) {
@@ -319,7 +319,7 @@ class Mapper {
 		$this->classes = $this->getClesses($this->data['class']);
 
 		$this->id = sha1($explorer);
-		$this->dir = REGNET_LOCAL_DIR . '/local/map/' . $this->id;
+		$this->dir = REGNET_LOCAL_DIR . '/map/' . $this->id;
 	}
 	
 	/**

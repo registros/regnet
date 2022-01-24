@@ -8,18 +8,20 @@
  * @link        http://registros.net
  */
 
+if (!defined('REGNET_LOCAL_DIR')) {
 
-$reflection = new \ReflectionClass(\Composer\Autoload\ClassLoader::class);
-$regnet_local_dir = dirname(dirname($reflection->getFileName()));
-$regnet_local_dir .= '/../regnet/'; 
+	$reflection = new \ReflectionClass(\Composer\Autoload\ClassLoader::class);
+	$regnet_local_dir = dirname(dirname($reflection->getFileName()));
+	$regnet_local_dir .= '/../regnet/';
 
-if (!is_dir($regnet_local_dir)) {
-	
-	mkdir($regnet_local_dir);
+	if (!is_dir($regnet_local_dir)) {
+
+		mkdir($regnet_local_dir);
+	}
+
+	define('REGNET_LOCAL_DIR', realpath($regnet_local_dir));
 }
 
-
-define('REGNET_LOCAL_DIR', realpath($regnet_local_dir));
 define('REGNET_DIR', realpath(__DIR__ . '/../'));
 
 define('CONTEXT_SERVER', 'server');

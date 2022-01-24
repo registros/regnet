@@ -41,7 +41,7 @@ class Etc {
 			return self::$data[$name];
 		}
 		
-		$file = REGNET_LOCAL_DIR . "/local/etc/{$name}.php";
+		$file = REGNET_LOCAL_DIR . "/etc/{$name}.php";
 		
 		if (!file_exists($file)) {
 			

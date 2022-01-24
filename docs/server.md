@@ -45,7 +45,7 @@ $api->dump();
 
 ## Server ##
 
-Export the classes and methods through the Regnet API. The security policy and the list of exported classes and methods is managed in the files ./regnet/local/etc/server.php
+Export the classes and methods through the Regnet API. The security policy and the list of exported classes and methods is managed in the files ./regnet/etc/server.php
 
 ```php
 use Regnet\Server\Server;

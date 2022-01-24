@@ -61,25 +61,25 @@ try {
 	 */
 	$init = null;
 
-	if (!is_dir(__DIR__ . '/local/etc')) {
+	if (!is_dir(__DIR__ . '/etc')) {
 
 		Cli::output(null);
 		Cli::output('Initializing the Regnet environment...');
 
-		mkdir(__DIR__ . '/local/etc', 0777, true);
+		mkdir(__DIR__ . '/etc', 0777, true);
 		$init = true;
 	}
 
-	if (!is_dir(__DIR__ . '/local/map')) {
-		mkdir(__DIR__ . '/local/map', 0777, true);
+	if (!is_dir(__DIR__ . '/map')) {
+		mkdir(__DIR__ . '/map', 0777, true);
 	}
 
-	if (!file_exists(__DIR__ . '/local/etc/server.php')) {
-		$init = ($init and (copy(REGNET_DIR . '/res/etc/server.php', __DIR__ . '/local/etc/server.php')));
+	if (!file_exists(__DIR__ . '/etc/server.php')) {
+		$init = ($init and (copy(REGNET_DIR . '/res/etc/server.php', __DIR__ . '/etc/server.php')));
 	}
 
-	if (!file_exists(__DIR__ . '/local/etc/client.php')) {
-		$init = ($init and (copy(REGNET_DIR . '/res/etc/client.php', __DIR__ . '/local/etc/client.php')));
+	if (!file_exists(__DIR__ . '/etc/client.php')) {
+		$init = ($init and (copy(REGNET_DIR . '/res/etc/client.php', __DIR__ . '/etc/client.php')));
 	}
 	
 	if ($init !== null) {
@@ -89,8 +89,8 @@ try {
 			Cli::output('Regnet environment is ready!', Cli::COLOR_GREEN);
 			Cli::output(null);
 			Cli::output('Configuration files:');
-			Cli::output(__DIR__ . '/local/etc/server.php');
-			Cli::output(__DIR__ . '/local/etc/client.php');
+			Cli::output(__DIR__ . '/etc/server.php');
+			Cli::output(__DIR__ . '/etc/client.php');
 			Cli::output(null);
 			Cli::output("Run '\$ php regnet/regnet.php' to manage external API packages");
 			Cli::output(null);

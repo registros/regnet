@@ -95,7 +95,7 @@ class RPC {
 			return;
 		}
 
-		throw new Exception("Configure 'onCache' in local/etc/client.php");
+		throw new Exception("Configure 'onCache' in etc/client.php");
 	}
 
 	/**
@@ -113,7 +113,7 @@ class RPC {
 			return $cache->getCache($key, $value);
 		}
 
-		throw new Exception("Configure 'onCache' in local/etc/client.php");
+		throw new Exception("Configure 'onCache' in etc/client.php");
 	}
 
 	/**
