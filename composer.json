@@ -1,6 +1,7 @@
 {
 	"name": "registros/regnet",
 	"description": "Regnet is a set of standards and tools to facilitate the communication within the distributed web infrastructure.",
+	"keywords": ["php", "json", "rpc", "jsonrpc", "json-rpc", "php-json-rpc", "http", "client", "server"],
 	"type": "library",
 	"license": "MIT",
 	"autoload": {
@@ -18,6 +19,8 @@
 		}
 	],
 	"minimum-stability": "stable",
-	"require": {}
+	"require": {
+		"php": ">=7.2.0"
+	}
 
 }
