@@ -7,7 +7,8 @@
  * @copyright   Registros en la Red
  * @link        http://registros.net
  */
-require '../core/init.php';
+
+//require 'path_to_project/vendor/autoload.php';
 
 use Regnet\Server\Request;
 use Regnet\Server\Response;
