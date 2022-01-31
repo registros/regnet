@@ -669,7 +669,7 @@ class Mapper {
 
 				if (array_key_exists('default', $param)) {
 
-					$default = " = " . $this->getDefault($param['default']);
+					$default = " = " . $this->getDefault($param['default'], $type);
 				}
 			}
 
@@ -682,9 +682,10 @@ class Mapper {
 	/**
 	 * 
 	 * @param mixed $default
+	 * @param string $type
 	 * @return string
 	 */
-	private function getDefault($default): string {
+	private function getDefault($default, string $type = null): string {
 
 		if (is_numeric($default)) {
 			return $default;
@@ -692,6 +693,10 @@ class Mapper {
 
 		if (is_bool($default)) {
 			return $default ? 'true' : 'false';
+		}
+		
+		if (in_array($type, ['bool', 'boolean', 'int', 'integer', 'float'])) {
+			return 'null';
 		}
 
 		if (is_string($default)) {
